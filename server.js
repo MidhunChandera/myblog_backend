@@ -20,7 +20,9 @@ server.use('/api/blog',blogrouter)
 server.use('/api/user',userrouter)
 server.use('/api/comment',commentrouter)
 server.use('/images',express.static('uploads'))
-
+server.get('/',(req,res)=>{
+    res.send('api working')
+  })
 server.listen(PORT,()=>{
     console.log("server running");
     
